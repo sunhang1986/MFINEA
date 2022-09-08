@@ -15,6 +15,7 @@ parser.add_argument('--test_dir', default='outdoor', type=str)
 parser.add_argument('--input_imgs', default="/data/sh_data/lbh/network/results/test/",type=str)
 parser.add_argument('--gt_imgs', default="/data/sh_data/lbh/Ex_tra/base_eca/data/test/gt/",type=str)
 args = parser.parse_args()
+# data_name:{outdoor, densehaze, nhhaze, thinfog, moderatefog, thickfog}
 data_name = args.test_dir
 
 
@@ -96,34 +97,10 @@ def compute_ssim(im1, im2, k1=0.01, k2=0.03, win_size=11, L=255):
  
     return np.mean(np.mean(ssim_map))
 
-# # outdoor
-# deal_img_path = r"/data/sh_data/lbh/network/results/outdoor/"
-# gt_img_path = r"/data/sh_data/lbh/DATASETS/Test_DATASET/outdoor/gt/"
-
-# dense
-# deal_img_path = r"/data/sh_data/lbh/network/results/dense_outdoor/"
-# gt_img_path = r"/data/sh_data/lbh/DATASETS/Test_DATASET/dense_outdoor/gt/"
 
 # nhhaze
 deal_img_path = args.input_imgs
 gt_img_path = args.gt_imgs
-
-# deal_img_path = r"/data/sh_data/lbh/network/results/test/"
-# gt_img_path = r"/data/sh_data/lbh/Ex_tra/base_eca/data/test/gt/"
-
-
-
-# thinfog
-# deal_img_path = r"/data/sh_data/lbh/network/results/test/"
-# gt_img_path = r"/data/sh_data/lbh/Test_ssim/thin/test/target/"
-
-# moderatefog
-# deal_img_path = r"/data/sh_data/lbh/network/results/test/"
-# gt_img_path = r"/data/sh_data/lbh/Test_ssim/zhong/test/target/"
-
-# thickfog
-# deal_img_path = r"/data/sh_data/lbh/network/results/test/"
-# gt_img_path = r"/data/sh_data/lbh/Test_ssim/thick/test/target/"
 
 deal_img_list = os.listdir(deal_img_path)
 gt_img_list = os.listdir(gt_img_path)
