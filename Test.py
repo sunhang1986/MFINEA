@@ -13,12 +13,6 @@ import utils
 from DataSet import RESIDE_Test
 from skimage import img_as_ubyte
 
-# 首先要定义段
-# nhhaze： /data/sh_data/lbh/Ex_tra/base_eca/data    test
-
-# dense： /data/sh_data/lbh/DATASETS/Test_DATASET    dense_outdoor
-
-# thin : 
 
 parser = argparse.ArgumentParser(description='Image Deraining using MPRNet')
 parser.add_argument('--input_dir', default='/data/sh_data/lbh/Test_ssim/thick', type=str, help='Directory of validation images')
@@ -96,7 +90,6 @@ for dataset in datasets:
                     utils.save_img((os.path.join(result_dir, filenames[batch])), restored_img)
                 elif datasets == ['test']:
                     utils.save_img((os.path.join(result_dir, filenames[batch])), restored_img)
-                # utils.save_img((os.path.join(result_dir, filenames[batch] + '.png')), restored_img)
 
 
 
