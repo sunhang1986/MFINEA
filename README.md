@@ -16,18 +16,10 @@ Prerequisites
 
 Test
 --
-The [Download](https://sites.google.com/view/reside-dehaze-datasets) path of RESIDE dataset . the [Download](https://labsites.rochester.edu/gsharma/research/computer-vision/hazerd/) path of Hazerd dataset . the [Download](https://data.vision.ee.ethz.ch/cvl/ntire18//o-haze/) path of Ohaze dataset . 
+The [Download](https://sites.google.com/view/reside-dehaze-datasets) path of RESIDE dataset . the [Download](https://data.vision.ee.ethz.ch/cvl/ntire19//dense-haze/) path of Densehaze dataset. the [Download](https://data.vision.ee.ethz.ch/cvl/ntire21/) path of Nhhaze dataset . The [Download](https://www.dropbox.com/s/k2i3p7puuwl2g59/Haze1k.zip?dl=0) path of haze1k dataset
 
 Test the model on *RESIDE*:
+` python Test.py --input_dir "test_dataset_path" --result_dir "save_path" --weight "model_path" --gpus "1" `
 
-` python   test.py   --cuda --gpus 0,1 --test --test_ori --test_path test_imgpath --Gx1_model_path premodel/epoch_ots_Gx1.pth` 
-
-Test the model on *Hazerd*:
-
-` python   test.py   --cuda --gpus 0,1 --test --test_ori --test_path test_imgpath --Gx1_model_path premodel/epoch_hazerd_Gx1.pth` 
-
-Test the model on *Ohaze*:
-
-` python   test.py   --cuda --gpus 0,1 --test --test_ori --test_path test_imgpath --Gx1_model_path premodel/epoch_ohaze_Gx1.pth` 
 
 
