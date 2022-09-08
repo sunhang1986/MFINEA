@@ -20,5 +20,6 @@ The [Download](https://sites.google.com/view/reside-dehaze-datasets) path of RES
 
 Test the model:
 ` python Test.py --input_dir "test_dataset_path" --result_dir "save_path" --weight "model_path" --gpus "1" `
+--
 Cal PSNR and SSIM:
 ` python cal_psnr_ssim.py --test_dir "the name of datasets" --input_imgs "results_path" --gt_imgs "gt_path" `
